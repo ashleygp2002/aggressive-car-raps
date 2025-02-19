@@ -1,35 +1,33 @@
 import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import AnimatedImage from "./AnimatedImage";
 
 const Hero = () => {
   return (
     <HeroContainer>
-      <motion.h1 
-        initial={{ opacity: 0, y: 20 }} 
-        animate={{ opacity: 1, y: 0 }} 
-        transition={{ duration: 1 }}
-      >
-        The Future of Car Wraps
-      </motion.h1>
-      <motion.p 
-        initial={{ opacity: 0, y: 20 }} 
-        animate={{ opacity: 1, y: 0 }} 
-        transition={{ delay: 0.5, duration: 1 }}
-      >
-        Ultra-thin. Ultra-sleek. Ultra-durable.
-      </motion.p>
-
-      {/* Replace static motion.img with AnimatedImage */}
-      <AnimatedImage />
-
-      <motion.button 
-        whileHover={{ scale: 1.1 }}
-        transition={{ duration: 0.3 }}
-      >
-        Explore Now
-      </motion.button>
+      <Overlay />
+      <ContentWrapper>
+        <motion.h1 
+          initial={{ opacity: 0, y: 20 }} 
+          animate={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 1 }}
+        >
+          The Future of Car Wraps
+        </motion.h1>
+        <motion.p 
+          initial={{ opacity: 0, y: 20 }} 
+          animate={{ opacity: 1, y: 0 }} 
+          transition={{ delay: 0.5, duration: 1 }}
+        >
+          Ultra-thin. Ultra-sleek. Ultra-durable.
+        </motion.p>
+        <motion.button 
+          whileHover={{ scale: 1.1 }}
+          transition={{ duration: 0.3 }}
+        >
+          Explore Now
+        </motion.button>
+      </ContentWrapper>
     </HeroContainer>
   );
 };
@@ -40,10 +38,27 @@ const HeroContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: black;
+  position: relative;
+  background: url(${process.env.PUBLIC_URL + "/images/car.jpg"}) no-repeat center center/cover;
   color: white;
   text-align: center;
+  padding: 20px;
+`;
 
+const Overlay = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
+  z-index: 1;
+`;
+
+const ContentWrapper = styled.div`
+  z-index: 2;
+  position: relative;
+  
   h1 {
     font-size: 3rem;
     font-weight: bold;

@@ -6,7 +6,7 @@ const AnimatedImage = () => {
 
   useEffect(() => {
     const img = new Image();
-    img.src = "https://source.unsplash.com/1600x900/?luxury-car,black";
+    img.src = process.env.PUBLIC_URL + "/images/car.jpg"; // Use local image
     img.onload = () => setIsLoaded(true);
   }, []);
 
@@ -14,11 +14,19 @@ const AnimatedImage = () => {
     <>
       {isLoaded && (
         <motion.img 
-          src="https://source.unsplash.com/1600x900/?luxury-car,black"
+          src={process.env.PUBLIC_URL + "/images/car.jpg"}
           alt="Luxury Car"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
+          style={{
+            width: "70%",
+            maxWidth: "800px",
+            borderRadius: "10px",
+            boxShadow: "0 5px 15px rgba(0,0,0,0.3)",
+            position: "relative",
+            zIndex: 0
+          }}
         />
       )}
     </>

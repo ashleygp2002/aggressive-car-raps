@@ -9,9 +9,13 @@ import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 import ServicesSection from "./components/ServicesSection";
 import InstagramEmbed from "./components/InstagramEmbed"; 
+import GlobalStyles from "./components/GlobalStyles"; 
+
 
 const App = () => {
   return (
+    <>
+    <GlobalStyles />
     <Router>
       <Navbar />
       <Routes>
@@ -32,6 +36,7 @@ const App = () => {
       </Routes>
       <Footer />
     </Router>
+    </>
   );
 };
 

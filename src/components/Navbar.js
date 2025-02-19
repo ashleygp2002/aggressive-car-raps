@@ -3,65 +3,84 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png"; // Ensure your logo is in src/assets/
 
+
 const Navbar = () => {
-  return (
-    <Nav>
-      <NavMenu>
-        <NavItem><StyledLink to="/services">SERVICES</StyledLink></NavItem>
-        <NavItem><StyledLink to="/about">ABOUT</StyledLink></NavItem>
-      </NavMenu>
-
-      <LogoContainer>
-        <Link to="/"> {/* Clicking this sends user to home page */}
-          <img src={logo} alt="Aggressive Car Wraps" />
-        </Link>
-      </LogoContainer>
-
-      <NavMenu>
-        <NavItem><StyledLink to="/location">LOCATION</StyledLink></NavItem>
-        <NavItem><StyledLink to="/contact">CONTACT</StyledLink></NavItem>
-      </NavMenu>
-    </Nav>
-  );
-};
-
-const Nav = styled.nav`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 50px;
-  background: #101218;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    return (
+      <NavContainer>
+        <NavContent>
+          <NavItem>
+            <StyledLink to="/services">SERVICES</StyledLink>
+          </NavItem>
+          <NavItem>
+            <StyledLink to="/about">ABOUT</StyledLink>
+          </NavItem>
+          <LogoContainer>
+            <Link to="/"> {/* Clicking this sends user to home page */}
+            <img src={logo} alt="Aggressive Car Wraps" />
+            </Link>
+        </LogoContainer>
+          <NavItem>
+            <StyledLink to="/location">LOCATION</StyledLink>
+          </NavItem>
+          <NavItem>
+            <StyledLink to="/contact">CONTACT</StyledLink>
+          </NavItem>
+        </NavContent>
+      </NavContainer>
+    );
+  };
+  
+  const NavContainer = styled.nav`
   width: 100%;
+  height: 80px; /* Set a fixed height */
+  background: #0a0a0a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   top: 0;
-  z-index: 100;
+  left: 0;
+  z-index: 1000;
 `;
 
-const NavMenu = styled.ul`
-  list-style: none;
-  display: flex;
-  flex: 1;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 0;
-`;
+  
+  const NavContent = styled.div`
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
+  
+    @media (max-width: 768px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+  `;
+  
+  const NavItem = styled.div`
+    text-align: center;
+  
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
+  `;
+  
+  const StyledLink = styled(Link)`
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s;
+  
+    &:hover {
+      color: #ffcc00;
+    }
+  `;
+  
 
-const NavItem = styled.li`
-  font-weight: bold;
-`;
-
-const StyledLink = styled(Link)`
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-  transition: 0.3s;
-
-  &:hover {
-    color: #4caf50; /* Green highlight effect on hover */
-  }
-`;
-
+  
 const LogoContainer = styled.div`
   flex: .5;
   text-align: center;
