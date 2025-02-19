@@ -4,7 +4,7 @@ import styled from "styled-components";
 const LocationMap = () => {
   return (
     <MapContainer>
-      <h2>📍 We're Here for You!</h2>
+      <h2>We're Here for You!</h2>
       <p>Visit us at <strong>1505 S Santa Fe Ave, Los Angeles, CA 90021</strong></p>
       <iframe
         title="Google Map"
@@ -30,7 +30,7 @@ const MapContainer = styled.section`
   h2 {
     font-size: 2rem;
     font-weight: bold;
-    color: #99ff00;
+    color: lightgrey;
     margin-bottom: 10px;
   }
 
