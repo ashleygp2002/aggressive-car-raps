@@ -71,11 +71,11 @@ const AboutContainer = styled.div`
     font-size: 3rem;
     color: #ffcc00;
     margin-bottom: 20px;
-    font-family: "Arial", sans-serif;
+    // font-family: "Arial", sans-serif;
   }
 
   p {
-    font-family: "Courier New", monospace;
+    // font-family: "Courier New", monospace;
     font-size: 1.2rem;
     margin-bottom: 40px;
   }

@@ -1,24 +1,55 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 const ContactForm = () => {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // Prevent page reload
+
+    const formData = new FormData(e.target);
+
+    await fetch("https://formsubmit.co/ajax/aggressivecarwraps@gmail.com", {
+      method: "POST",
+      body: formData,
+      headers: {
+        "Accept": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success) {
+          setIsSubmitted(true); // Show success message
+        } else {
+          alert("Error: Could not submit form.");
+        }
+      })
+      .catch((error) => console.error("Form Submission Error:", error));
+  };
+
   return (
     <FormContainer>
       <FormWrapper>
-        <h1>Contact Aggressive Car Wraps</h1>
-        <form action="https://formsubmit.co/aggressivecarwraps@gmail.com" method="POST">
-          <input type="text" name="name" placeholder="Name" required />
-          <input type="email" name="email" placeholder="Email" required />
-          <input type="tel" name="phone" placeholder="Phone" required />
-          <input type="text" name="subject" placeholder="What are you interested in?" required />
-          <textarea name="message" placeholder="How can we help you?" required></textarea>
+        {isSubmitted ? (
+          <SuccessMessage>Thank you! Your message has been submitted.</SuccessMessage>
+        ) : (
+          <>
+            <h1>Contact Aggressive Car Wraps</h1>
+            <form onSubmit={handleSubmit}>
+              <input type="text" name="name" placeholder="Name" required />
+              <input type="email" name="email" placeholder="Email" required />
+              <input type="tel" name="phone" placeholder="Phone" required />
+              <input type="text" name="subject" placeholder="What are you interested in?" required />
+              <textarea name="message" placeholder="How can we help you?" required></textarea>
 
-          
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_template" value="box" />
+              {/* Hidden fields to prevent captcha and format submission */}
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="box" />
 
-          <button type="submit">Submit</button>
-        </form>
+              <button type="submit">Submit</button>
+            </form>
+          </>
+        )}
       </FormWrapper>
     </FormContainer>
   );
@@ -36,15 +67,15 @@ const FormContainer = styled.div`
 `;
 
 const FormWrapper = styled.div`
-  background: rgba(0, 0, 0, 0.6); /* Transparent glass effect */
-  backdrop-filter: blur(10px); /* Frosted glass effect */
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
   padding: 40px;
   border-radius: 15px;
   max-width: 500px;
   width: 100%;
   text-align: center;
   box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.5);
-  
+
   h1 {
     color: lightgray;
     font-size: 2.5rem;
@@ -55,7 +86,6 @@ const FormWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    
   }
 
   input, textarea {
@@ -100,15 +130,14 @@ const FormWrapper = styled.div`
   button:hover {
     background: #3e8e41;
   }
+`;
 
-  @media (max-width: 768px) {
-    h1 {
-      font-size: 2rem;
-    }
-
-    padding: 30px;
-    max-width: 90%;
-  }
+const SuccessMessage = styled.div`
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: lightgrey;
+  text-align: center;
+  padding: 20px;
 `;
 
 export default ContactForm;

@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import ServicesSection from "./components/ServicesSection";
 import InstagramEmbed from "./components/InstagramEmbed"; 
 import GlobalStyles from "./components/GlobalStyles"; 
+import ContactSection from "./components/ContactSection";
 
 
 const App = () => {
@@ -26,6 +27,7 @@ const App = () => {
               <Hero />
               <ServicesSection />
               <InstagramEmbed />
+              <ContactSection />
             </>
           }
         />
