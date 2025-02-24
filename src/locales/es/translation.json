@@ -1,0 +1,102 @@
+{
+    "navbar": {
+      "services": "Servicios",
+      "about": "Acerca de",
+      "location": "Ubicación",
+      "contact": "Contacto"
+    },
+  
+  "hero": {
+    "title": "El Futuro de los Vinilos para Autos",
+    "subtitle": "Ultrafino. Ultraligero. Ultradurable.",
+    "button": "Explorar Ahora"
+  },
+
+    "servicesSection": {
+      "title": "Nuestros Servicios",
+      "vinyl_car_wraps": {
+        "title": "Envolturas de Vinilo para Autos",
+        "description": "Transforma la apariencia de tu automóvil con el servicio de envoltura de vinilo de Aggressive en Los Ángeles. Ya sea que busques un cambio de color o un diseño único, podemos hacerlo realidad con nuestros materiales de vinilo de alta calidad y una instalación experta. Este servicio protege la pintura original de tu automóvil mientras le da un nuevo aspecto fresco."
+      },
+      "paint_protection_film": {
+        "title": "Película de Protección de Pintura",
+        "description": "Protege tu inversión con el servicio de protección de pintura de Aggressive. Nuestra película de protección transparente es la manera perfecta de resguardar la pintura de tu automóvil contra rayones, astillas y otros daños. Nuestros expertos crearán un plan de protección personalizado para mantener tu automóvil seguro durante años."
+      },
+      "commercial_wraps": {
+        "title": "Envolturas Comerciales",
+        "description": "Haz que tu negocio y marca se destaquen con el servicio de envoltura comercial de Aggressive. Nuestros especialistas tienen años de experiencia en envolturas comerciales y pueden ayudarte a crear un diseño personalizado que atraerá la atención y aumentará el reconocimiento de la marca."
+      },
+      "custom_wrap_design": {
+        "title": "Diseño de Envoltura Personalizada",
+        "description": "Expresa tu estilo único con el servicio de diseño de envoltura personalizada de Aggressive. Ya sea que busques un gráfico llamativo o un patrón sutil, haremos realidad tu visión y haremos que tu automóvil se destaque entre la multitud."
+      }
+    },
+
+  
+    "contact": {
+      "title": "CONTÁCTANOS",
+      "subtitle": "Llámanos o escríbenos hoy.",
+      "email": "Correo Electrónico",
+      "phone": "Teléfono",
+      "address": "Dirección",
+      "instagram": "Instagram"
+    },
+    
+  
+    "services": {
+      "title": "Nuestros Servicios",
+      "subtitle": "Cuidado automotriz premium con tecnología de vanguardia.",
+      "paint_protection": {
+        "title": "Película de Protección de Pintura (PPF)",
+        "description": "Una película transparente y auto-reparable que protege su automóvil de rayones, astillas y escombros de la carretera mientras mantiene su pintura original."
+      },
+      "calipers_color": {
+        "title": "Cambio de Color de Calipers",
+        "description": "Transforma tus calipers de freno con colores personalizados que combinen con la estética de tu automóvil. Opciones en mate, brillo o metálico."
+      },
+      "powder_coating": {
+        "title": "Recubrimiento en Polvo y Reparación de Rines",
+        "description": "Un acabado de alta calidad que mejora la durabilidad y el aspecto de las ruedas y calipers. Disponible en varios colores y acabados. Repara raspaduras y rayones."
+      },
+      "window_tint": {
+        "title": "Polarizado de Ventanas",
+        "description": "Reduce el deslumbramiento, el calor y los rayos UV mientras mejora la privacidad con tintes de alta calidad en varios tonos."
+      },
+      "ceramic_coating": {
+        "title": "Recubrimiento Cerámico",
+        "description": "Un polímero líquido de larga duración aplicado al exterior de tu automóvil para un brillo extremo, efectos hidrofóbicos y protección contra suciedad y contaminantes."
+      },
+      "paint_correction": {
+        "title": "Corrección de Pintura",
+        "description": "Elimina marcas de remolinos, oxidación y rayones menores para restaurar la pintura de tu automóvil a un acabado impecable."
+      },
+      "commercial_wraps": {
+        "title": "Envolturas Comerciales",
+        "description": "Decales personalizados, vinilos y soluciones de marca para negocios y vehículos personales."
+      }
+    },
+  
+    "about": {
+      "title": "Sobre Nosotros",
+      "subtitle": "Aggressive Car Wraps se basa en la pasión por la excelencia, la innovación y el compromiso de ofrecer los mejores vinilos para vehículos.",
+      "legacyTitle": "Nuestro Legado",
+      "legacyDescription1": "Un negocio familiar con más de 20 años de experiencia, Aggressive Car Wraps ha estado a la vanguardia de la transformación de vehículos con precisión y estilo. Lo que comenzó como una pequeña operación local se ha convertido en un nombre de confianza en Los Ángeles y más allá.",
+      "legacyDescription2": "Nuestro equipo de profesionales altamente capacitados está impulsado por la innovación, la artesanía y la atención al detalle, asegurando que cada vehículo que tocamos se destaque en la carretera.",
+      "workTitle": "Nuestro Trabajo Reciente"
+    },
+    
+  
+    "contactForm": {
+      "title": "Contáctanos",
+      "success": "¡Gracias! Tu mensaje ha sido enviado.",
+      "error": "Error: No se pudo enviar el formulario.",
+      "name": "Nombre",
+      "email": "Correo Electrónico",
+      "phone": "Teléfono",
+      "subject": "¿En qué estás interesado?",
+      "message": "¿Cómo podemos ayudarte?",
+      "submit": "Enviar"
+    }
+    
+  }
+  

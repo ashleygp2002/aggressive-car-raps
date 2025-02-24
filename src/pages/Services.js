@@ -1,76 +1,78 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next"; // Import translation hook
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-// Services Data
-const services = [
-  {
-    title: "Powder Coating",
-    description:
-      "A high-quality finish that enhances the durability and look of wheels, calipers, and other parts. Available in various colors and finishes.",
-    image: "/images/powder_coating.jpg",
-  },
-  {
-    title: "Paint Protection Film (PPF)",
-    description:
-      "A transparent, self-healing film that protects your car from scratches, chips, and road debris while maintaining its original paint.",
-    image: "/images/paint_protection1.png",
-    gallery: [
-      "/images/paint_protection1.png",
-      "/images/paint_protection2.png",
-      "/images/paint_protection3.png",
-      "/images/paint_protection4.png",
-    ],
-  },
-  {
-    title: "Calipers Color Change",
-    description:
-      "Transform your brake calipers with custom colors that match your car’s aesthetic. Options include matte, gloss, or metallic finishes.",
-    image: "/images/calipers1.png",
-  },
-  {
-    title: "Window Tinting",
-    description:
-      "Reduce glare, heat, and UV rays while enhancing privacy with premium-quality window tints in various shades.",
-    image: "/images/window_tint.jpg",
-  },
-  {
-    title: "Rim Repair",
-    description:
-      "Repair curb rash, scratches, and damages on your rims to restore their original factory look.",
-    image: "/images/rim_repair.jpg",
-  },
-  {
-    title: "Ceramic Coating",
-    description:
-      "A long-lasting liquid polymer applied to your car’s exterior for extreme shine, hydrophobic effects, and protection against dirt & contaminants.",
-    image: "/images/ceramic_coating1.png",
-  },
-  {
-    title: "Paint Correction",
-    description:
-      "Remove swirl marks, oxidation, and minor scratches to restore your car’s paint to a flawless, showroom finish.",
-    image: "/images/paint_correction1.png",
-  },
-  {
-    title: "Commercial Wraps",
-    description: "Custom decals, vinyl wraps, and branding solutions for businesses and personal vehicles.",
-    image: "/images/commercial_wraps1.png",  
-    gallery: [
-      "/images/commercial_wraps1.png",
-      "/images/commercial_wraps2.png",
-      "/images/commercial_wraps3.png",
-    ],
-  }
-];
-
 const ServicesGrid = () => {
+  const { t } = useTranslation();
   const [selectedService, setSelectedService] = useState(null);
   const [selectedImage, setSelectedImage] = useState("");
 
+  const services = [
+    {
+      title: t("services.paint_protection.title"),
+      description: t("services.paint_protection.description"),
+      image: "/images/paint_protection1.png",
+      gallery: [
+        "/images/paint_protection1.png",
+        "/images/paint_protection2.png",
+        "/images/paint_protection3.png",
+        "/images/paint_protection4.png",
+        "/images/paint_protection5.png",
+        "/images/paint_protection6.png",
+      ],
+    },
+    {
+      title: t("services.calipers_color.title"),
+      description: t("services.calipers_color.description"),
+      image: "/images/calipers1.png",
+      gallery: [
+        "/images/calipers1.png",
+        "/images/calipers2.png",
+      ],
+    },
+    {
+      title: t("services.powder_coating.title"),
+      description: t("services.powder_coating.description"),
+      image: "/images/powder_coating1.png",
+      gallery: [
+        "/images/powder_coating1.png",
+        "/images/powder_coating2.png",
+      ],
+    },
+    {
+      title: t("services.window_tint.title"),
+      description: t("services.window_tint.description"),
+      image: "/images/window_tint.jpg",
+    },
+    {
+      title: t("services.ceramic_coating.title"),
+      description: t("services.ceramic_coating.description"),
+      image: "/images/ceramic_coating1.png",
+      gallery: [
+        "/images/rim_repair.jpg",
+      ],
+    },
+    {
+      title: t("services.paint_correction.title"),
+      description: t("services.paint_correction.description"),
+      image: "/images/paint_correction1.png",
+    },
+    {
+      title: t("services.commercial_wraps.title"),
+      description: t("services.commercial_wraps.description"),
+      image: "/images/commercial_wraps1.png",
+      gallery: [
+        "/images/commercial_wraps1.png",
+        "/images/commercial_wraps2.png",
+        "/images/commercial_wraps3.png",
+      ],
+    }
+  ];
+
   const openGallery = (service) => {
     setSelectedService(service);
-    setSelectedImage(service.image); // Default to main image
+    setSelectedImage(service.image);
   };
 
   const closeGallery = () => {
@@ -79,19 +81,17 @@ const ServicesGrid = () => {
 
   return (
     <Container>
-      <h1>Our Services</h1>
-      <p>Premium automotive care with cutting-edge technology.</p>
+      <h1>{t("services.title")}</h1>
+      <p>{t("services.subtitle")}</p>
       <Grid>
         {services.map((service, index) => (
           <ServiceCard key={index}>
-            {/* Main Image */}
             <motion.img
               src={service.image}
               alt={service.title}
               onClick={() => openGallery(service)}
               whileHover={{ scale: 1.05 }}
             />
-            {/* Description */}
             <div className="text-content">
               <h2>{service.title}</h2>
               <p>{service.description}</p>
@@ -100,13 +100,11 @@ const ServicesGrid = () => {
         ))}
       </Grid>
 
-      {/* Mini Display Window (Modal) */}
       {selectedService && (
         <ModalOverlay onClick={closeGallery}>
           <ModalContainer onClick={(e) => e.stopPropagation()}>
             <CloseButton onClick={closeGallery}>&times;</CloseButton>
-            
-            {/* Thumbnail Gallery Above */}
+
             {selectedService.gallery && (
               <GalleryThumbnails>
                 {selectedService.gallery.map((img, i) => (
@@ -121,7 +119,6 @@ const ServicesGrid = () => {
               </GalleryThumbnails>
             )}
 
-            {/* Large Display Image */}
             <MainImage src={selectedImage} alt="Selected Image" />
           </ModalContainer>
         </ModalOverlay>
@@ -129,6 +126,7 @@ const ServicesGrid = () => {
     </Container>
   );
 };
+
 
 // Styled Components
 const Container = styled.div`

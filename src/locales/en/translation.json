@@ -1,0 +1,101 @@
+{
+  "navbar": {
+    "services": "Services",
+    "about": "About",
+    "location": "Location",
+    "contact": "Contact"
+  },
+
+  "hero": {
+    "title": "The Future of Car Wraps",
+    "subtitle": "Ultra-thin. Ultra-sleek. Ultra-durable.",
+    "button": "Explore Now"
+  },
+    "servicesSection": {
+      "title": "Our Services",
+      "vinyl_car_wraps": {
+        "title": "Vinyl Car Wraps",
+        "description": "Transform the look of your car with Aggressive's Vinyl Car Wrapping service in Los Angeles. Whether you're seeking a color change or a unique design, we can make it happen with our high-quality vinyl materials and expert installation. This service protects your car's original paint while giving it a fresh new look."
+      },
+      "paint_protection_film": {
+        "title": "Paint Protection Film",
+        "description": "Protect your investment with Aggressive's Paint Protection service. Our clear film protection is the perfect way to safeguard your car's paint from scratches, chips, and other types of damage. Our experts will create a customized protection plan to keep your car safe for years."
+      },
+      "commercial_wraps": {
+        "title": "Commercial Wraps",
+        "description": "Make your business and brand stand out with Aggressive's Commercial Wrapping service. Our specialists have years of experience in commercial wrapping and can help you create a customized design that will grab attention and increase brand recognition."
+      },
+      "custom_wrap_design": {
+        "title": "Custom Wrap Design",
+        "description": "Express your unique style with Aggressive's Custom Wrap Design service. Whether you're looking for a bold graphic or a subtle pattern, we’ll bring your vision to life and make your car stand out from the crowd."
+      }
+    },
+    
+    "contact": {
+      "title": "CONTACT US",
+      "subtitle": "Call or write us today.",
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Address",
+      "instagram": "Instagram"
+    },
+    
+
+    "services": {
+      "title": "Our Services",
+      "subtitle": "Premium automotive care with cutting-edge technology.",
+      "paint_protection": {
+        "title": "Paint Protection Film (PPF)",
+        "description": "A transparent, self-healing film that protects your car from scratches, chips, and road debris while maintaining its original paint."
+      },
+      "calipers_color": {
+        "title": "Calipers Color Change",
+        "description": "Transform your brake calipers with custom colors that match your car’s aesthetic. Options include matte, gloss, or metallic finishes."
+      },
+      "powder_coating": {
+        "title": "Powder Coating & Rim Repair",
+        "description": "A high-quality finish that enhances the durability and look of wheels and calipers. Available in various colors and finishes. Repairs curb rash and scratches."
+      },
+      "window_tint": {
+        "title": "Window Tinting",
+        "description": "Reduce glare, heat, and UV rays while enhancing privacy with premium-quality window tints in various shades."
+      },
+      "ceramic_coating": {
+        "title": "Ceramic Coating",
+        "description": "A long-lasting liquid polymer applied to your car’s exterior for extreme shine, hydrophobic effects, and protection against dirt & contaminants."
+      },
+      "paint_correction": {
+        "title": "Paint Correction",
+        "description": "Remove swirl marks, oxidation, and minor scratches to restore your car’s paint to a flawless, showroom finish."
+      },
+      "commercial_wraps": {
+        "title": "Commercial Wraps",
+        "description": "Custom decals, vinyl wraps, and branding solutions for businesses and personal vehicles."
+      }
+    },
+
+
+    "about": {
+      "title": "About Us",
+      "subtitle": "Aggressive Car Wraps is built on a passion for excellence, innovation, and a commitment to delivering the highest quality vehicle wraps.",
+      "legacyTitle": "Our Legacy",
+      "legacyDescription1": "A family-owned business with over 20 years of experience, Aggressive Car Wraps has been at the forefront of transforming vehicles with precision and style. What started as a small local operation has now become a trusted name in Los Angeles and beyond.",
+      "legacyDescription2": "Our team of skilled professionals is driven by innovation, craftsmanship, and attention to detail, ensuring that every vehicle we touch stands out on the road.",
+      "workTitle": "Our Recent Work"
+    },
+
+  
+    "contactForm": {
+      "title": "Contact Aggressive Car Wraps",
+      "success": "Thank you! Your message has been submitted.",
+      "error": "Error: Could not submit form.",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "subject": "What are you interested in?",
+      "message": "How can we help you?",
+      "submit": "Submit"
+    }
+    
+  }
+  

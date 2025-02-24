@@ -1,8 +1,11 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
 const Hero = () => {
+  const { t } = useTranslation(); // Get translation function
+
   return (
     <HeroContainer>
       <Overlay />
@@ -12,20 +15,20 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }} 
           transition={{ duration: 1 }}
         >
-          The Future of Car Wraps
+          {t("hero.title")}
         </motion.h1>
         <motion.p 
           initial={{ opacity: 0, y: 20 }} 
           animate={{ opacity: 1, y: 0 }} 
           transition={{ delay: 0.5, duration: 1 }}
         >
-          Ultra-thin. Ultra-sleek. Ultra-durable.
+          {t("hero.subtitle")}
         </motion.p>
         <motion.button 
           whileHover={{ scale: 1.1 }}
           transition={{ duration: 0.3 }}
         >
-          Explore Now
+          {t("hero.button")}
         </motion.button>
       </ContentWrapper>
     </HeroContainer>
