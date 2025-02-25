@@ -65,8 +65,8 @@
         "description": "A long-lasting liquid polymer applied to your car’s exterior for extreme shine, hydrophobic effects, and protection against dirt & contaminants."
       },
       "paint_correction": {
-        "title": "Paint Correction",
-        "description": "Remove swirl marks, oxidation, and minor scratches to restore your car’s paint to a flawless, showroom finish."
+        "title": "Paint Correction & Detailing",
+        "description": "Enhance your vehicle’s appearance by removing swirl marks, oxidation, and minor scratches while also deep cleaning every surface for a pristine, showroom-quality finish."
       },
       "commercial_wraps": {
         "title": "Commercial Wraps",
@@ -74,6 +74,12 @@
       }
     },
 
+    "reviews": {
+      "title": " What Clients Say ",
+      "subtitle": "Here are a few of our satisfied customers from Yelp.",
+      "readMore": "Read More",
+      "showLess": "Show Less"
+    },
 
     "about": {
       "title": "About Us",
@@ -83,19 +89,39 @@
       "legacyDescription2": "Our team of skilled professionals is driven by innovation, craftsmanship, and attention to detail, ensuring that every vehicle we touch stands out on the road.",
       "workTitle": "Our Recent Work"
     },
+    
+    "brands_section": {
+      "title": "Wrap & PPF Companies We Work With",
+      "subtitle": "These are the trusted companies we source our materials from."
+    },
+    
 
+    "location": {
+      "title": "We're Here for You!",
+      "address_prefix": "Visit us at"
+    },
+    
   
-    "contactForm": {
-      "title": "Contact Aggressive Car Wraps",
-      "success": "Thank you! Your message has been submitted.",
-      "error": "Error: Could not submit form.",
-      "name": "Name",
-      "email": "Email",
-      "phone": "Phone",
-      "subject": "What are you interested in?",
-      "message": "How can we help you?",
-      "submit": "Submit"
-    }
+      "contactForm": {
+        "title": "Contact Us",
+        "name": "Your Name",
+        "email": "Your Email",
+        "phone": "Your Phone Number",
+        "selectService": "Select a Service",
+        "services": {
+          "ppf": "PPF",
+          "calipers": "Calipers Color Change",
+          "powderCoating": "Powder Coating & Rim Repair",
+          "windowTint": "Window Tint",
+          "ceramicCoating": "Ceramic Coating",
+          "paintCorrection": "Paint Correction & Detailing",
+          "commercialWraps": "Commercial Wraps"
+        },
+        "message": "How can we help you?",
+        "submit": "Submit",
+        "success": "Thank you! Your message has been submitted.",
+        "error": "Error: Could not submit form."
+      }    
     
   }
   

@@ -11,7 +11,9 @@ import ServicesSection from "./components/ServicesSection";
 import InstagramEmbed from "./components/InstagramEmbed"; 
 import GlobalStyles from "./components/GlobalStyles"; 
 import ContactSection from "./components/ContactSection";
-import "./i18n"; // Import the language configuration
+import YelpReviews from "./components/YelpReviews"; 
+import "./i18n"; 
+
 
 
 const App = () => {
@@ -28,6 +30,7 @@ const App = () => {
               <Hero />
               <ServicesSection />
               <InstagramEmbed />
+              <YelpReviews />
               <ContactSection />
             </>
           }

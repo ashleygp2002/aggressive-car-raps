@@ -7,7 +7,7 @@
     },
   
   "hero": {
-    "title": "El Futuro de los Vinilos para Autos",
+    "title": "El Futuro de los Vinil para Autos",
     "subtitle": "Ultrafino. Ultraligero. Ultradurable.",
     "button": "Explorar Ahora"
   },
@@ -15,8 +15,8 @@
     "servicesSection": {
       "title": "Nuestros Servicios",
       "vinyl_car_wraps": {
-        "title": "Envolturas de Vinilo para Autos",
-        "description": "Transforma la apariencia de tu automóvil con el servicio de envoltura de vinilo de Aggressive en Los Ángeles. Ya sea que busques un cambio de color o un diseño único, podemos hacerlo realidad con nuestros materiales de vinilo de alta calidad y una instalación experta. Este servicio protege la pintura original de tu automóvil mientras le da un nuevo aspecto fresco."
+        "title": "Envolturas de Vinil para Autos",
+        "description": "Transforma la apariencia de tu automóvil con el servicio de envoltura de vinil de Aggressive en Los Ángeles. Ya sea que busques un cambio de color o un diseño único, podemos hacerlo realidad con nuestros materiales de vinil de alta calidad y una instalación experta. Este servicio protege la pintura original de tu automóvil mientras le da un nuevo aspecto fresco."
       },
       "paint_protection_film": {
         "title": "Película de Protección de Pintura",
@@ -67,14 +67,24 @@
         "description": "Un polímero líquido de larga duración aplicado al exterior de tu automóvil para un brillo extremo, efectos hidrofóbicos y protección contra suciedad y contaminantes."
       },
       "paint_correction": {
-        "title": "Corrección de Pintura",
-        "description": "Elimina marcas de remolinos, oxidación y rayones menores para restaurar la pintura de tu automóvil a un acabado impecable."
+        "title": "Corrección de Pintura y Detallado",
+        "description": "Mejora la apariencia de tu vehículo eliminando marcas de remolino, oxidación y arañazos menores, mientras se realiza una limpieza profunda de cada superficie para un acabado impecable de calidad de exhibición."
       },
       "commercial_wraps": {
         "title": "Envolturas Comerciales",
         "description": "Decales personalizados, vinilos y soluciones de marca para negocios y vehículos personales."
       }
     },
+
+
+    "reviews": {
+      "title": " Lo Que Dicen Nuestros Clientes ",
+      "subtitle": "Aquí hay algunos de nuestros clientes satisfechos en Yelp.",
+      "readMore": "Leer más",
+      "showLess": "Mostrar menos"
+    },
+
+    
   
     "about": {
       "title": "Sobre Nosotros",
@@ -85,18 +95,35 @@
       "workTitle": "Nuestro Trabajo Reciente"
     },
     
-  
-    "contactForm": {
-      "title": "Contáctanos",
-      "success": "¡Gracias! Tu mensaje ha sido enviado.",
-      "error": "Error: No se pudo enviar el formulario.",
-      "name": "Nombre",
-      "email": "Correo Electrónico",
-      "phone": "Teléfono",
-      "subject": "¿En qué estás interesado?",
-      "message": "¿Cómo podemos ayudarte?",
-      "submit": "Enviar"
-    }
+    "brands_section": {
+      "title": "Empresas de Wrap y PPF con las que trabajamos",
+      "subtitle": "Estas son las empresas de confianza de las que obtenemos nuestros materiales."
+    },
     
-  }
+    "location": {
+      "title": "¡Estamos aquí para ti!",
+      "address_prefix": "Visítanos en"
+    },
+    
+      "contactForm": {
+        "title": "Contáctanos",
+        "name": "Tu Nombre",
+        "email": "Tu Correo Electrónico",
+        "phone": "Tu Número de Teléfono",
+        "selectService": "Selecciona un Servicio",
+        "services": {
+          "ppf": "PPF",
+          "calipers": "Cambio de Color de Pinzas",
+          "powderCoating": "Revestimiento en Polvo y Reparación de Rines",
+          "windowTint": "Polarizado de Ventanas",
+          "ceramicCoating": "Recubrimiento Cerámico",
+          "paintCorrection": "Corrección de Pintura y Detallado",
+          "commercialWraps": "Envolturas Comerciales"
+        },
+        "message": "¿Cómo podemos ayudarte?",
+        "submit": "Enviar",
+        "success": "¡Gracias! Tu mensaje ha sido enviado.",
+        "error": "Error: No se pudo enviar el formulario."
+      }
+}
   

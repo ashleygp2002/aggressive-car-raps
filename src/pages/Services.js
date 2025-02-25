@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next"; // Import translation hook
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import BrandsCarousel from "../components/BrandsCarousel";
 
 const ServicesGrid = () => {
   const { t } = useTranslation();
@@ -43,20 +44,31 @@ const ServicesGrid = () => {
     {
       title: t("services.window_tint.title"),
       description: t("services.window_tint.description"),
-      image: "/images/window_tint.jpg",
+      image: "/images/window_tint1.png",
+      gallery: [
+        "/images/window_tint1.png",
+        "/images/window_tint2.png",
+      ],
     },
     {
       title: t("services.ceramic_coating.title"),
       description: t("services.ceramic_coating.description"),
       image: "/images/ceramic_coating1.png",
       gallery: [
-        "/images/rim_repair.jpg",
+        "/images/ceramic_coating1.png",
+        "/images/ceramic_coating2.png",
+        "/images/ceramic_coating3.png",
       ],
     },
     {
       title: t("services.paint_correction.title"),
       description: t("services.paint_correction.description"),
       image: "/images/paint_correction1.png",
+      gallery: [
+        "/images/paint_correction1.png",
+        "/images/paint_correction2.png",
+        "/images/paint_correction3.png",
+      ],
     },
     {
       title: t("services.commercial_wraps.title"),
@@ -97,6 +109,7 @@ const ServicesGrid = () => {
               <p>{service.description}</p>
             </div>
           </ServiceCard>
+          
         ))}
       </Grid>
 
@@ -123,6 +136,14 @@ const ServicesGrid = () => {
           </ModalContainer>
         </ModalOverlay>
       )}
+
+      <BrandsSection>
+        <BrandsTitle>{t("brands_section.title")}</BrandsTitle>
+        <BrandsSubtitle>{t("brands_section.subtitle")}</BrandsSubtitle>
+      </BrandsSection>
+
+      <BrandsCarousel />
+
     </Container>
   );
 };
@@ -146,14 +167,7 @@ const Container = styled.div`
   }
 `;
 
-const Grid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 50px 10px;
-  max-width: 1200px;
-  margin: auto;
-`;
+
 
 const ServiceCard = styled.div`
   background: rgba(255, 255, 255, 0.05);
@@ -169,7 +183,8 @@ const ServiceCard = styled.div`
 
   img {
     width: 100%;
-    height: auto;
+    height: 250px; /* Ensures images have a uniform height */
+    object-fit: cover; /* Prevents distortion and cropping */
     border-radius: 10px;
   }
 
@@ -187,6 +202,7 @@ const ServiceCard = styled.div`
     color: #ddd;
   }
 `;
+
 
 /* 🔹 MODAL STYLES */
 const ModalOverlay = styled.div`
@@ -245,12 +261,40 @@ const Thumbnail = styled.img`
   }
 `;
 
-/* 🔹 Main Image */
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 50px 10px;
+  max-width: 1200px;
+  margin: auto;
+`;
+
 const MainImage = styled.img`
   width: 100%;
-  max-width: 600px;
-  height: auto;
+  max-height: 500px;
+  object-fit: cover;
   border-radius: 10px;
 `;
+
+const BrandsSection = styled.div`
+  text-align: center;
+  margin: 50px 0;
+`;
+
+const BrandsTitle = styled.h2`
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+`;
+
+const BrandsSubtitle = styled.p`
+  font-size: 1.3rem;
+  color: #ccc;
+  margin-bottom: 20px;
+`;
+
+
 
 export default ServicesGrid;

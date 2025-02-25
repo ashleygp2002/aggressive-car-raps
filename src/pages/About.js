@@ -148,4 +148,5 @@ const ImageWrapper = styled.div`
   }
 `;
 
+
 export default About;

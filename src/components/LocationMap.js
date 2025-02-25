@@ -1,11 +1,17 @@
 import React from "react";
 import styled from "styled-components";
+import { useTranslation } from "react-i18next"; // Import translation hook
 
 const LocationMap = () => {
+  const { t } = useTranslation(); // Initialize translation hook
+
   return (
     <MapContainer>
-      <h2>We're Here for You!</h2>
-      <p>Visit us at <strong>1505 S Santa Fe Ave, Los Angeles, CA 90021</strong></p>
+      <h2>{t("location.title")}</h2>
+      <p>
+        {t("location.address_prefix")}{" "}
+        <strong>1505 S Santa Fe Ave, Los Angeles, CA 90021</strong>
+      </p>
       <iframe
         title="Google Map"
         width="100%"
