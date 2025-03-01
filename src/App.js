@@ -12,6 +12,7 @@ import InstagramEmbed from "./components/InstagramEmbed";
 import GlobalStyles from "./components/GlobalStyles"; 
 import ContactSection from "./components/ContactSection";
 import YelpReviews from "./components/YelpReviews"; 
+// import Customizer from "./components/Customizer";
 import "./i18n"; 
 
 
@@ -28,7 +29,11 @@ const App = () => {
           element={
             <>
               <Hero />
-              <ServicesSection />
+              {/* <ServicesSection /> */}
+              <div id="services-section"> {/* Add this wrapper */}
+               <ServicesSection />
+              </div>
+              {/* <Customizer /> */}
               <InstagramEmbed />
               <YelpReviews />
               <ContactSection />

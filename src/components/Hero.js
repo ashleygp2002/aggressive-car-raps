@@ -6,6 +6,14 @@ import { motion } from "framer-motion";
 const Hero = () => {
   const { t } = useTranslation(); // Get translation function
 
+  // 🔹 Function to scroll to ServicesSection
+  const scrollToServices = () => {
+    const servicesSection = document.getElementById("services-section"); 
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: "smooth" }); // 🔹 Smooth scroll
+    }
+  };
+
   return (
     <HeroContainer>
       <Overlay />
@@ -24,9 +32,11 @@ const Hero = () => {
         >
           {t("hero.subtitle")}
         </motion.p>
+        {/* 🔹 Button Scrolls to Services */}
         <motion.button 
           whileHover={{ scale: 1.1 }}
           transition={{ duration: 0.3 }}
+          onClick={scrollToServices} // 🔹 Calls function on click
         >
           {t("hero.button")}
         </motion.button>

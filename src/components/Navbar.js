@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.png"; // Ensure your logo is in src/assets/
-import { useTranslation } from "react-i18next"; // Import translation hook
+import logo from "../assets/logo.png"; 
+import { useTranslation } from "react-i18next"; 
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();
@@ -32,8 +32,6 @@ const Navbar = () => {
         <NavItem>
           <StyledLink to="/contact">{t("navbar.contact")}</StyledLink>
         </NavItem>
-
-        {/* 🔹 Language Switcher Dropdown */}
         <LanguageSwitcher>
           <select onChange={(e) => changeLanguage(e.target.value)}>
             <option value="en">🇺🇸 EN</option>
@@ -58,21 +56,7 @@ const NavContainer = styled.nav`
   z-index: 1000;
 `;
 
-const NavContent = styled.div`
-  width: 100%;
-  max-width: 1200px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 0 15px;
-  flex-wrap: nowrap;
-  gap: 5px;
-  
-  @media (max-width: 768px) {
-    justify-content: space-between;
-    padding: 5px 8px;
-  }
-`;
+
 
 const NavItem = styled.div`
   text-align: center;
@@ -127,13 +111,26 @@ const LogoContainer = styled.div`
     }
   }
 `;
+const NavContent = styled.div`
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 15px;
+  flex-wrap: nowrap;
+  gap: 5px;
+  position: relative; /* Helps position language switcher */
+
+  @media (max-width: 768px) {
+    justify-content: space-between;
+    padding: 5px 8px;
+  }
+`;
 
 const LanguageSwitcher = styled.div`
-  position: absolute;
-  right: 30px;
-  top: 50%;
-  transform: translateY(-50%);
-  
+  margin-left: 10px;
+
   select {
     background: none;
     border: none;
@@ -151,9 +148,16 @@ const LanguageSwitcher = styled.div`
   }
 
   @media (max-width: 768px) {
+    position: absolute;
+    bottom: -5px; /* Moves it below the navbar */
+    left: 50%;
+    transform: translateX(335%); /* EN position */
     select {
-      font-size: 10px;
+      font-size: 10px; 
+    }
   }
 `;
+
+
 
 export default Navbar;
